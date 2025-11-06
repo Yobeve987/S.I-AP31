@@ -1,0 +1,21 @@
+Creamos carpeta Bash y AP31 con mkdir -- mkdir Bash AP31
+nos movemos a AP31 con cd -- cd AP31
+creamos varias directorios mas con mkdir -- mkdir desarrollo direccion marketing ventas y archivo "para este mismo texto"
+probamos diferecina entre mkdir a b c y a/b/c -- mkdir a b c & mkdir a/b/c "ERROR"
+en la segunda opcion nos salta error que no encuntra archivos en el directorio
+nos movemos a carpeta ventas con cd -- cd ventas
+creamos ficheros con touch o echo para añadir contenido "touch" en mi caso -- touch enero febrero marzo
+nos movemos a AP31 -- cd ..
+desde AP31 con cp -r copiamos todo lo de ventas hacia marketing -- cp -r ventas/* marketing
+para comprobarlo podemos ir a marketing y hacer un ls -l -- cd marketing -- ls -la
+Nos movemos a marketing -- cd .. -- cd marketing
+desde marketing creamos un directorio con nombre del año actual a ventas -- mkdir ../ventas/2025 && cp ../ventas/* ../ventas/2025/
+nos movemos a ventas -- cd .. -- cd ventas
+creamos un directorio nuevo con el año anterior y copiar el contenido de marketing -- mkdir 2024 && cp ../marketing/*ero 2024/
+nos movemos a desarrollo -- cd.. -- cd desarrollo
+copiamos el contenido directorio 2024 de ventas a desarrollo -- cp -r ../ventas/2024/ .
+ahora borramos el contenido de 2024 desde desarrollo -- rm -r ../ventas/2024
+nos movemos a AP31 -- cd ..
+cambiamos el nombre de ventas_2024 a ventas2024 que esta en desarrollo -- mv desarrollo/ventas_2024 desarrollo/ventas2024
+nos movemos a ventas -- cd ventas
+en ventas volvermos a cambair el nombre de ventas2024 a v_2024 -- mv ../desarrollo/ventas2024 .. /desarrollo/v_2024
